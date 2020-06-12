@@ -2,7 +2,8 @@ const
     express = require("express"),
     bodyParser = require("body-parser"),
     app = express(),
-    port = 3000;
+    port = 3000,
+    products = require("./mockup-data")
 
 app.use(bodyParser.json())
 app.use(
@@ -12,7 +13,8 @@ app.use(
 )
 
 app.get('/', (req, res) => {
-    res.json({ info: "Node.js, Express, and Postgres"})
+    console.log(products)
+    res.json(products)
 })
 
 app.listen(port, () => {
