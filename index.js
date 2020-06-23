@@ -12,7 +12,7 @@ app.use(
     })
 )
 
-app.get('/', (req, res) => {
+app.get('/products', (req, res) => {
     console.log(products)
     res.json(products)
 })
